@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xl8-nx-oyl">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Kitchen Sink App-->
+        <scene sceneID="1Bq-zE-R0b">
+            <objects>
+                <tableViewController id="sSV-xG-9Gn" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6on-pX-pUv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="C0J-5T-QVn">
+                            <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
+                        <sections>
+                            <tableViewSection id="D9P-PE-VBP">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="mOU-ao-Gxj">
+                                        <rect key="frame" x="0.0" y="108" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mOU-ao-Gxj" id="xsa-ZI-7aG">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NpI-TV-l5e">
+                                                    <state key="normal" title="Map VIew"/>
+                                                    <connections>
+                                                        <segue destination="Uqa-Jk-JrH" kind="show" id="aNW-ad-Csa"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="NpI-TV-l5e" firstAttribute="centerX" secondItem="xsa-ZI-7aG" secondAttribute="centerX" id="OSg-xe-iwB"/>
+                                                <constraint firstItem="NpI-TV-l5e" firstAttribute="centerY" secondItem="xsa-ZI-7aG" secondAttribute="centerY" id="tfN-Nn-3i6"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Swy-vY-eMz">
+                                        <rect key="frame" x="0.0" y="152" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Swy-vY-eMz" id="0zg-yP-VZC">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VI3-Nk-s0A">
+                                                    <state key="normal" title="Tri Liste"/>
+                                                    <connections>
+                                                        <segue destination="4Tq-gh-0a4" kind="show" id="etT-bd-1X2"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="VI3-Nk-s0A" firstAttribute="centerY" secondItem="0zg-yP-VZC" secondAttribute="centerY" id="5rL-mi-bg4"/>
+                                                <constraint firstItem="VI3-Nk-s0A" firstAttribute="centerX" secondItem="0zg-yP-VZC" secondAttribute="centerX" id="SmK-eC-gG1"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="4ra-uZ-GEn">
+                                        <rect key="frame" x="0.0" y="196" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4ra-uZ-GEn" id="ygp-bP-jxX">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CnB-aH-dn1">
+                                                    <state key="normal" title="Animation"/>
+                                                    <connections>
+                                                        <segue destination="tSb-d0-jU8" kind="show" id="KWW-db-Xdd"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="CnB-aH-dn1" firstAttribute="centerY" secondItem="ygp-bP-jxX" secondAttribute="centerY" id="O7a-Pm-1ZR"/>
+                                                <constraint firstItem="CnB-aH-dn1" firstAttribute="centerX" secondItem="ygp-bP-jxX" secondAttribute="centerX" id="iDT-pu-Uuv"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="TN3-hv-deY">
+                                        <rect key="frame" x="0.0" y="240" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TN3-hv-deY" id="DRu-lm-xgm">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfl-A8-6SS">
+                                                    <state key="normal" title="Equalizer"/>
+                                                    <connections>
+                                                        <segue destination="f4a-O5-WcO" kind="show" id="jeA-UR-eu2"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="gfl-A8-6SS" firstAttribute="centerY" secondItem="DRu-lm-xgm" secondAttribute="centerY" id="Z80-Ia-uPt"/>
+                                                <constraint firstItem="gfl-A8-6SS" firstAttribute="centerX" secondItem="DRu-lm-xgm" secondAttribute="centerX" id="ucq-a5-e7C"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="x3H-6G-oUp">
+                                        <rect key="frame" x="0.0" y="284" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="x3H-6G-oUp" id="WiP-vb-Bd2">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQh-Y1-B3S">
+                                                    <state key="normal" title="Memory"/>
+                                                    <connections>
+                                                        <segue destination="Hzp-vI-OqH" kind="show" id="CSB-HV-rnb"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="fQh-Y1-B3S" firstAttribute="centerX" secondItem="WiP-vb-Bd2" secondAttribute="centerX" id="fqe-yq-Wtr"/>
+                                                <constraint firstItem="fQh-Y1-B3S" firstAttribute="centerY" secondItem="WiP-vb-Bd2" secondAttribute="centerY" id="wyZ-XA-L74"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="c7r-KU-7eB">
+                                        <rect key="frame" x="0.0" y="328" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="c7r-KU-7eB" id="Klq-Mb-Ypg">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qce-0C-IZl">
+                                                    <state key="normal" title="Meteo"/>
+                                                    <connections>
+                                                        <segue destination="ty0-Yx-2dM" kind="show" id="iVB-vT-yzJ"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="qce-0C-IZl" firstAttribute="centerY" secondItem="Klq-Mb-Ypg" secondAttribute="centerY" id="YUI-eQ-LMP"/>
+                                                <constraint firstItem="qce-0C-IZl" firstAttribute="centerX" secondItem="Klq-Mb-Ypg" secondAttribute="centerX" id="svp-Mf-FCD"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="wbN-1m-jYd">
+                                        <rect key="frame" x="0.0" y="372" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wbN-1m-jYd" id="GmV-Vf-F9s">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TsN-S7-jFo">
+                                                    <state key="normal" title="Chat"/>
+                                                    <connections>
+                                                        <segue destination="jza-PR-8db" kind="show" id="NSq-lL-CzU"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="TsN-S7-jFo" firstAttribute="centerY" secondItem="GmV-Vf-F9s" secondAttribute="centerY" id="479-EW-Jmo"/>
+                                                <constraint firstItem="TsN-S7-jFo" firstAttribute="centerX" secondItem="GmV-Vf-F9s" secondAttribute="centerX" id="7gd-Lh-OCA"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="MZX-Ay-MzH">
+                                        <rect key="frame" x="0.0" y="416" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MZX-Ay-MzH" id="v0d-KE-ejl">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ao8-QV-grk">
+                                                    <state key="normal" title="Contact List"/>
+                                                    <connections>
+                                                        <segue destination="pMf-MR-ONd" kind="show" id="Z2Q-e4-CYW"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ao8-QV-grk" firstAttribute="centerY" secondItem="v0d-KE-ejl" secondAttribute="centerY" id="AqA-WN-PMb"/>
+                                                <constraint firstItem="ao8-QV-grk" firstAttribute="centerX" secondItem="v0d-KE-ejl" secondAttribute="centerX" id="ocs-ei-TkZ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="AKk-hq-qpA">
+                                        <rect key="frame" x="0.0" y="460" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AKk-hq-qpA" id="neN-Af-57G">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kE4-XI-VLo">
+                                                    <state key="normal" title="Image Liste"/>
+                                                    <connections>
+                                                        <segue destination="lDG-Xk-2Qv" kind="show" id="d9V-NL-kqF"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="kE4-XI-VLo" firstAttribute="centerY" secondItem="neN-Af-57G" secondAttribute="centerY" id="dRU-8X-Q0Z"/>
+                                                <constraint firstItem="kE4-XI-VLo" firstAttribute="centerX" secondItem="neN-Af-57G" secondAttribute="centerX" id="tys-pR-urM"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="sSV-xG-9Gn" id="bWm-79-MO4"/>
+                            <outlet property="delegate" destination="sSV-xG-9Gn" id="BX7-k7-0kW"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Kitchen Sink App" id="tsQ-jF-z1Z"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fS7-ae-6oj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="346.39999999999998" y="127.28635682158921"/>
+        </scene>
+        <!--MapViewApp-->
+        <scene sceneID="JLO-9C-CGl">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MapViewApp" id="Uqa-Jk-JrH" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pX7-Px-VYD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1206" y="-118"/>
+        </scene>
+        <!--TableViewTri-->
+        <scene sceneID="m0q-jm-tLJ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TableViewTri" id="4Tq-gh-0a4" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lxe-tK-g7W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1204.8" y="-55.772113943028494"/>
+        </scene>
+        <!--AnimationView-->
+        <scene sceneID="eGU-jl-laN">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AnimationView" id="tSb-d0-jU8" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kfd-j3-JkP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1212.8" y="2.6986506746626691"/>
+        </scene>
+        <!--EqualizerView-->
+        <scene sceneID="JfD-Yp-NJ5">
+            <objects>
+                <viewControllerPlaceholder storyboardName="EqualizerView" id="f4a-O5-WcO" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jdt-1V-7aU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1211" y="56"/>
+        </scene>
+        <!--MemoryView-->
+        <scene sceneID="rhR-2x-Tjf">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MemoryView" id="Hzp-vI-OqH" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8YY-3h-73m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1206" y="110"/>
+        </scene>
+        <!--MeteoView-->
+        <scene sceneID="obf-TZ-nmb">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MeteoView" id="ty0-Yx-2dM" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h0r-pE-tp9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1196" y="165"/>
+        </scene>
+        <!--ChatView-->
+        <scene sceneID="9N3-W1-hfR">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ChatView" id="jza-PR-8db" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dd5-iz-YJi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1189" y="208"/>
+        </scene>
+        <!--ContactListView-->
+        <scene sceneID="s9I-tP-PBz">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ContactListView" id="pMf-MR-ONd" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="czd-wm-Bti" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1222" y="261"/>
+        </scene>
+        <!--ImageListeView-->
+        <scene sceneID="bVh-jk-5UV">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ImageListeView" id="lDG-Xk-2Qv" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NGv-f9-JO2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1219" y="312"/>
+        </scene>
+        <!--Kitchen Sink App-->
+        <scene sceneID="ecK-xX-9r7">
+            <objects>
+                <navigationController title="Kitchen Sink App" automaticallyAdjustsScrollViewInsets="NO" id="xl8-nx-oyl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sho-Dh-MHS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sSV-xG-9Gn" kind="relationship" relationship="rootViewController" id="hpN-KU-UFs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LsU-wP-giv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-592.79999999999995" y="127.28635682158921"/>
+        </scene>
+    </scenes>
+</document>

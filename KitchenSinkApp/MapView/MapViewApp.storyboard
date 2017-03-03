@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AzE-XQ-VUQ">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map View Controller-->
+        <scene sceneID="Euw-WT-IKk">
+            <objects>
+                <viewController id="AzE-XQ-VUQ" customClass="MapViewController" customModule="KitchenSinkApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Evr-3F-PKm"/>
+                        <viewControllerLayoutGuide type="bottom" id="Z9y-iv-Vmt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gXV-cL-YNN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="fLD-Du-80K"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="I7j-La-mIS">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OjS-V1-gGd">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nYv-09-bOz">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fLD-Du-80K" firstAttribute="trailing" secondItem="I7j-La-mIS" secondAttribute="trailing" id="7hG-Qm-i1h"/>
+                            <constraint firstItem="I7j-La-mIS" firstAttribute="top" secondItem="fLD-Du-80K" secondAttribute="bottom" constant="8" id="A8k-0a-wDb"/>
+                            <constraint firstItem="fLD-Du-80K" firstAttribute="top" secondItem="Evr-3F-PKm" secondAttribute="bottom" id="NIv-fv-BNm"/>
+                            <constraint firstItem="fLD-Du-80K" firstAttribute="leading" secondItem="I7j-La-mIS" secondAttribute="leading" id="P8r-oZ-Irs"/>
+                            <constraint firstItem="Z9y-iv-Vmt" firstAttribute="top" secondItem="I7j-La-mIS" secondAttribute="bottom" id="UMA-jE-cel"/>
+                            <constraint firstAttribute="trailing" secondItem="I7j-La-mIS" secondAttribute="trailing" id="eot-zJ-ota"/>
+                            <constraint firstItem="I7j-La-mIS" firstAttribute="leading" secondItem="gXV-cL-YNN" secondAttribute="leading" id="uMx-Zv-ujD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="labelLat" destination="OjS-V1-gGd" id="9Bb-yo-PXS"/>
+                        <outlet property="labelLong" destination="nYv-09-bOz" id="K1J-X0-spW"/>
+                        <outlet property="mapView" destination="fLD-Du-80K" id="QPw-sq-ARD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PLr-hO-Tli" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="949.60000000000002" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>

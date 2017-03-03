@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="XeG-M6-leG">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Equalizer-->
+        <scene sceneID="88K-p7-KGR">
+            <objects>
+                <viewController title="Equalizer" id="XeG-M6-leG" customClass="EqualizerView" customModule="KitchenSinkApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9KA-kJ-kX1"/>
+                        <viewControllerLayoutGuide type="bottom" id="UZJ-QD-xdQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2BJ-VF-jye">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="qoH-5D-oJs">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Nb Plages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OnD-iN-s5s">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="2" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="yk5-o0-7R3">
+                                        <connections>
+                                            <action selector="NbPlagesValueChanged:" destination="XeG-M6-leG" eventType="valueChanged" id="guG-PO-5kh"/>
+                                        </connections>
+                                    </slider>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="3" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="emR-f6-idw">
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="XNI-9r-Rt3"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="yk5-o0-7R3" firstAttribute="top" secondItem="qoH-5D-oJs" secondAttribute="top" constant="10" id="7md-zR-xd5"/>
+                                    <constraint firstItem="emR-f6-idw" firstAttribute="top" secondItem="qoH-5D-oJs" secondAttribute="top" id="O60-z1-8Fx"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="byd-KP-cnV">
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NCE-1V-x7c">
+                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                    </view>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Xde-Yl-5ah">
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="lNu-zU-otX">
+                                            <size key="itemSize" width="90" height="300"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EqualizerCell" id="QfT-lE-jAk" customClass="EqualizerCell" customModule="KitchenSinkApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="-1" width="90" height="300"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                    <rect key="frame" x="0.0" y="0.0" width="90" height="300"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20Hz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XOJ-ZO-mQo">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="0" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bXH-8a-vja">
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        </textView>
+                                                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-10" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="nOp-MG-9cM">
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="200" id="1U7-J3-LzN"/>
+                                                            </constraints>
+                                                            <connections>
+                                                                <action selector="equalizerValueChanged:" destination="QfT-lE-jAk" eventType="valueChanged" id="Lqp-al-NwV"/>
+                                                            </connections>
+                                                        </slider>
+                                                    </subviews>
+                                                </view>
+                                                <constraints>
+                                                    <constraint firstItem="nOp-MG-9cM" firstAttribute="centerX" secondItem="QfT-lE-jAk" secondAttribute="centerX" id="Cbv-ut-Y8v"/>
+                                                    <constraint firstItem="nOp-MG-9cM" firstAttribute="centerY" secondItem="QfT-lE-jAk" secondAttribute="centerY" id="EL9-Fb-RGE"/>
+                                                    <constraint firstItem="XOJ-ZO-mQo" firstAttribute="centerX" secondItem="QfT-lE-jAk" secondAttribute="centerX" id="RBb-es-eOs"/>
+                                                    <constraint firstItem="XOJ-ZO-mQo" firstAttribute="bottom" secondItem="QfT-lE-jAk" secondAttribute="bottomMargin" id="WSq-zb-nRo"/>
+                                                    <constraint firstItem="nOp-MG-9cM" firstAttribute="top" secondItem="bXH-8a-vja" secondAttribute="bottom" constant="85" id="Zkt-A7-LJN"/>
+                                                    <constraint firstItem="bXH-8a-vja" firstAttribute="top" secondItem="QfT-lE-jAk" secondAttribute="topMargin" id="bqh-dU-23D"/>
+                                                    <constraint firstItem="bXH-8a-vja" firstAttribute="centerX" secondItem="nOp-MG-9cM" secondAttribute="centerX" id="dft-i5-MlL"/>
+                                                    <constraint firstItem="XOJ-ZO-mQo" firstAttribute="leading" secondItem="QfT-lE-jAk" secondAttribute="leadingMargin" id="kB3-Sq-7fi"/>
+                                                    <constraint firstItem="XOJ-ZO-mQo" firstAttribute="centerX" secondItem="nOp-MG-9cM" secondAttribute="centerX" id="nXl-fY-ViJ"/>
+                                                    <constraint firstItem="XOJ-ZO-mQo" firstAttribute="trailing" secondItem="bXH-8a-vja" secondAttribute="trailing" id="ohj-H1-Mdn"/>
+                                                    <constraint firstItem="XOJ-ZO-mQo" firstAttribute="leading" secondItem="bXH-8a-vja" secondAttribute="leading" id="tsH-dL-0QX"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="frequencyValue" destination="XOJ-ZO-mQo" id="g0h-Nm-X5O"/>
+                                                    <outlet property="levelEqualizerSlider" destination="nOp-MG-9cM" id="ffQ-QV-ODn"/>
+                                                    <outlet property="valueEqualizer" destination="bXH-8a-vja" id="RhF-Sw-4nL"/>
+                                                </connections>
+                                            </collectionViewCell>
+                                        </cells>
+                                        <connections>
+                                            <outlet property="dataSource" destination="XeG-M6-leG" id="2D2-eK-7df"/>
+                                            <outlet property="delegate" destination="XeG-M6-leG" id="02Q-2f-lYi"/>
+                                        </connections>
+                                    </collectionView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="qoH-5D-oJs" secondAttribute="trailing" constant="8" id="3Ra-PM-er9"/>
+                            <constraint firstAttribute="trailing" secondItem="byd-KP-cnV" secondAttribute="trailing" id="BO5-bH-HS0"/>
+                            <constraint firstItem="byd-KP-cnV" firstAttribute="top" secondItem="qoH-5D-oJs" secondAttribute="bottom" id="DOK-Be-XTj"/>
+                            <constraint firstItem="qoH-5D-oJs" firstAttribute="leading" secondItem="2BJ-VF-jye" secondAttribute="leading" constant="8" id="QU4-Hk-rGv"/>
+                            <constraint firstItem="qoH-5D-oJs" firstAttribute="top" secondItem="9KA-kJ-kX1" secondAttribute="bottom" id="R0w-KI-ZDB"/>
+                            <constraint firstItem="byd-KP-cnV" firstAttribute="leading" secondItem="2BJ-VF-jye" secondAttribute="leading" id="W7s-4t-9zX"/>
+                            <constraint firstItem="UZJ-QD-xdQ" firstAttribute="top" secondItem="byd-KP-cnV" secondAttribute="bottom" id="h7F-g2-Na2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="NbPlagesSelectionnees" destination="emR-f6-idw" id="fnL-Zi-l2A"/>
+                        <outlet property="collectionEqualizer" destination="Xde-Yl-5ah" id="ruL-rj-Fl1"/>
+                        <outlet property="graphiqueView" destination="NCE-1V-x7c" id="Up2-7D-TV4"/>
+                        <outlet property="sliderNbPlages" destination="yk5-o0-7R3" id="UEQ-fz-Sjd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BNI-Cq-sGM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="-130.88455772113943"/>
+        </scene>
+    </scenes>
+</document>

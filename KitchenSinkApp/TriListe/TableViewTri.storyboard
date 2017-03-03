@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="RGK-27-V7m">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tri View Controller-->
+        <scene sceneID="vLa-r7-Scm">
+            <objects>
+                <viewController id="RGK-27-V7m" customClass="TriViewController" customModule="KitchenSinkApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="30v-FS-Sxf"/>
+                        <viewControllerLayoutGuide type="bottom" id="Kbp-kY-Y2k"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="p8m-QE-4ng">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1dI-z9-Tyw">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ozi-s6-fZf"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OFC-Bh-Kfl">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="6kF-VS-QeF"/>
+                                </constraints>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addObject:" destination="RGK-27-V7m" eventType="touchUpInside" id="2l2-BG-yBZ"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4j4-Pa-Tex">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CellView" id="aNJ-Ge-nk3" customClass="cellView" customModule="KitchenSinkApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aNJ-Ge-nk3" id="Wec-tX-mSP">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="lXu-Kf-ay5">
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="lXu-Kf-ay5" firstAttribute="top" secondItem="Wec-tX-mSP" secondAttribute="top" id="Cpm-ri-3Aa"/>
+                                                <constraint firstItem="lXu-Kf-ay5" firstAttribute="trailing" secondItem="Wec-tX-mSP" secondAttribute="trailingMargin" id="Es1-8D-OaF"/>
+                                                <constraint firstItem="lXu-Kf-ay5" firstAttribute="leading" secondItem="Wec-tX-mSP" secondAttribute="leadingMargin" id="F9N-Ft-w3F"/>
+                                                <constraint firstItem="lXu-Kf-ay5" firstAttribute="bottom" secondItem="Wec-tX-mSP" secondAttribute="bottomMargin" id="Z1z-Wy-XlC"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="myView" destination="Wec-tX-mSP" id="Erj-ao-eyq"/>
+                                            <outlet property="textView" destination="lXu-Kf-ay5" id="1Fn-ZH-6nt"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="RGK-27-V7m" id="BzR-Ip-dRd"/>
+                                    <outlet property="delegate" destination="RGK-27-V7m" id="ACn-cU-8o1"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OFC-Bh-Kfl" firstAttribute="top" secondItem="4j4-Pa-Tex" secondAttribute="bottom" constant="8" id="1g7-Ow-f6B"/>
+                            <constraint firstItem="4j4-Pa-Tex" firstAttribute="top" secondItem="30v-FS-Sxf" secondAttribute="bottom" id="7rJ-xT-pXN"/>
+                            <constraint firstItem="Kbp-kY-Y2k" firstAttribute="top" secondItem="1dI-z9-Tyw" secondAttribute="bottom" id="A79-B7-A4H"/>
+                            <constraint firstItem="OFC-Bh-Kfl" firstAttribute="leading" secondItem="1dI-z9-Tyw" secondAttribute="trailing" constant="8" id="DBF-zF-Qg6"/>
+                            <constraint firstItem="4j4-Pa-Tex" firstAttribute="leading" secondItem="p8m-QE-4ng" secondAttribute="leading" id="EFn-qx-mb8"/>
+                            <constraint firstAttribute="trailing" secondItem="OFC-Bh-Kfl" secondAttribute="trailing" id="GYg-q6-9Af"/>
+                            <constraint firstItem="OFC-Bh-Kfl" firstAttribute="leading" secondItem="1dI-z9-Tyw" secondAttribute="trailing" constant="8" id="ItE-7m-Cod"/>
+                            <constraint firstItem="Kbp-kY-Y2k" firstAttribute="top" secondItem="OFC-Bh-Kfl" secondAttribute="bottom" id="RoA-F9-mfS"/>
+                            <constraint firstItem="1dI-z9-Tyw" firstAttribute="leading" secondItem="p8m-QE-4ng" secondAttribute="leading" id="gwL-QG-TIW"/>
+                            <constraint firstAttribute="trailing" secondItem="4j4-Pa-Tex" secondAttribute="trailing" id="ihT-GG-U6Z"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="4j4-Pa-Tex" id="arn-5N-gmV"/>
+                        <outlet property="textField" destination="1dI-z9-Tyw" id="bu6-d9-TAU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GFD-3i-1vS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="44" y="180.35982008995504"/>
+        </scene>
+    </scenes>
+</document>

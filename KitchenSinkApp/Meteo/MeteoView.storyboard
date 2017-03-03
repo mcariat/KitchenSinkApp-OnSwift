@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8b9-5b-6yy">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Meteo-->
+        <scene sceneID="ouW-J1-6Hi">
+            <objects>
+                <viewController title="Meteo" id="8b9-5b-6yy" customClass="MeteoViewController" customModule="KitchenSinkApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="f7B-y8-JAb"/>
+                        <viewControllerLayoutGuide type="bottom" id="yBC-CD-oMe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9r9-xQ-AEt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gmQ-d2-QFo">
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Entrez un lieu." clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="xXW-ab-hTu">
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NK1-6p-zu0">
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="NK1-6p-zu0" secondAttribute="height" multiplier="1:1" id="2T0-qq-W8y"/>
+                                        </constraints>
+                                        <state key="normal" image="trackUserIcon"/>
+                                        <connections>
+                                            <action selector="enableMeteoToMyPosition:" destination="8b9-5b-6yy" eventType="touchUpInside" id="LkI-yM-p0g"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1Ga-ak-btR"/>
+                                </constraints>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="40" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yvc-1j-nh6">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MeteoCell" rowHeight="40" id="Xyn-a4-Ipn" customClass="MeteoCell" customModule="KitchenSinkApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="40"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xyn-a4-Ipn" id="bB9-vw-gVD">
+                                            <frame key="frameInset" width="343" height="39"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2NF-sz-Xbc">
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Horaire: 12H" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhS-3E-7jI">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="ZCZ-oz-T9F">
+                                                            <subviews>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thermometerIcon" translatesAutoresizingMaskIntoConstraints="NO" id="sRO-Be-tko">
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="sRO-Be-tko" secondAttribute="height" multiplier="1:1" id="8cv-Vj-FcS"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20°" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JMG-om-jWG">
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="JMG-om-jWG" secondAttribute="height" multiplier="5:4" id="aS9-PJ-Qxx"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0dV-Q8-JF9">
+                                                            <subviews>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="humidityIcon" translatesAutoresizingMaskIntoConstraints="NO" id="TIo-22-pLh">
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="TIo-22-pLh" secondAttribute="height" multiplier="1:1" id="Ifa-kD-aql"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnx-A2-IEz">
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="gnx-A2-IEz" secondAttribute="height" multiplier="5:3" id="FB3-e2-f03"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="zhS-3E-7jI" firstAttribute="top" secondItem="2NF-sz-Xbc" secondAttribute="top" constant="5" id="K0Z-yZ-TtA"/>
+                                                        <constraint firstAttribute="height" constant="32" id="sc6-ns-TJE"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="2NF-sz-Xbc" firstAttribute="leading" secondItem="bB9-vw-gVD" secondAttribute="leading" id="3Fy-zR-AtR"/>
+                                                <constraint firstAttribute="trailing" secondItem="2NF-sz-Xbc" secondAttribute="trailing" id="a6T-uW-9fo"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="2NF-sz-Xbc" secondAttribute="bottom" constant="-1" id="l3o-O1-UEP"/>
+                                                <constraint firstAttribute="bottom" secondItem="2NF-sz-Xbc" secondAttribute="bottom" constant="8" id="uI0-Zb-noN"/>
+                                                <constraint firstItem="2NF-sz-Xbc" firstAttribute="top" secondItem="bB9-vw-gVD" secondAttribute="top" id="wps-cp-pfg"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="labelHoraire" destination="zhS-3E-7jI" id="EfU-4Q-jIQ"/>
+                                            <outlet property="labelHumidity" destination="gnx-A2-IEz" id="qtB-uJ-VUq"/>
+                                            <outlet property="labelTemperature" destination="JMG-om-jWG" id="26A-va-c2u"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="8b9-5b-6yy" id="iT3-fz-FeJ"/>
+                                    <outlet property="delegate" destination="8b9-5b-6yy" id="aCI-6f-v6D"/>
+                                </connections>
+                            </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jkS-m4-TGb">
+                                <color key="backgroundColor" red="0.84527304602153408" green="0.84527304602153408" blue="0.84527304602153408" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="jkS-m4-TGb" secondAttribute="height" multiplier="1:1" id="eO3-um-FIR"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yvc-1j-nh6" firstAttribute="trailing" secondItem="9r9-xQ-AEt" secondAttribute="trailingMargin" id="COZ-K9-pis"/>
+                            <constraint firstItem="gmQ-d2-QFo" firstAttribute="leading" secondItem="9r9-xQ-AEt" secondAttribute="leading" id="DCv-jD-Kud"/>
+                            <constraint firstItem="gmQ-d2-QFo" firstAttribute="top" secondItem="f7B-y8-JAb" secondAttribute="bottom" constant="8" id="EC5-9M-S3Q"/>
+                            <constraint firstAttribute="trailing" secondItem="gmQ-d2-QFo" secondAttribute="trailing" id="Hnb-3m-Ze4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jkS-m4-TGb" secondAttribute="trailing" constant="32" id="Mlk-65-znw"/>
+                            <constraint firstItem="jkS-m4-TGb" firstAttribute="leading" secondItem="9r9-xQ-AEt" secondAttribute="leadingMargin" constant="31" id="RhI-Y9-HpF"/>
+                            <constraint firstItem="jkS-m4-TGb" firstAttribute="top" secondItem="gmQ-d2-QFo" secondAttribute="bottom" constant="8" id="Um8-rY-2OD"/>
+                            <constraint firstItem="yBC-CD-oMe" firstAttribute="top" secondItem="yvc-1j-nh6" secondAttribute="bottom" id="gyH-rd-fjD"/>
+                            <constraint firstItem="yvc-1j-nh6" firstAttribute="leading" secondItem="9r9-xQ-AEt" secondAttribute="leadingMargin" id="hyH-Mo-EXn"/>
+                            <constraint firstItem="yvc-1j-nh6" firstAttribute="top" secondItem="jkS-m4-TGb" secondAttribute="bottom" constant="8" id="kfN-KA-llA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageMeteo" destination="jkS-m4-TGb" id="IiK-Ge-S2B"/>
+                        <outlet property="tableMeteo" destination="yvc-1j-nh6" id="Wq7-H8-mtX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sez-zZ-cRi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="101.59999999999999" y="158.77061469265368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="humidityIcon" width="490" height="490"/>
+        <image name="thermometerIcon" width="500" height="500"/>
+        <image name="trackUserIcon" width="256" height="256"/>
+    </resources>
+</document>

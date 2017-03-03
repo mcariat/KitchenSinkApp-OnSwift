@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vRT-HS-P2A">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Animation View Controller-->
+        <scene sceneID="2Lc-ss-6Ll">
+            <objects>
+                <viewController id="vRT-HS-P2A" customClass="AnimationViewController" customModule="KitchenSinkApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="n1R-08-neT"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mmj-NQ-0jV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NL8-fh-c1E">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uqa-Di-XOw" customClass="AnimationView" customModule="KitchenSinkApp" customModuleProvider="target">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GwW-Dn-gvB">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="7Rj-9O-Uoy"/>
+                                    <constraint firstAttribute="width" constant="190" id="Cvg-10-jD8"/>
+                                </constraints>
+                                <state key="normal" title="Retract"/>
+                                <connections>
+                                    <action selector="clickbuton:" destination="vRT-HS-P2A" eventType="touchUpInside" id="w5F-kk-ms1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GwW-Dn-gvB" firstAttribute="bottom" secondItem="Mmj-NQ-0jV" secondAttribute="top" id="3VO-It-v87"/>
+                            <constraint firstItem="GwW-Dn-gvB" firstAttribute="top" secondItem="uqa-Di-XOw" secondAttribute="bottom" constant="8" symbolic="YES" id="4ND-NM-ixy"/>
+                            <constraint firstAttribute="trailing" secondItem="uqa-Di-XOw" secondAttribute="trailing" id="7Jt-qA-UNZ"/>
+                            <constraint firstItem="uqa-Di-XOw" firstAttribute="top" secondItem="n1R-08-neT" secondAttribute="bottom" id="Gyq-05-B94"/>
+                            <constraint firstItem="uqa-Di-XOw" firstAttribute="width" secondItem="NL8-fh-c1E" secondAttribute="width" id="Khf-Lk-tbs"/>
+                            <constraint firstItem="uqa-Di-XOw" firstAttribute="leading" secondItem="GwW-Dn-gvB" secondAttribute="leading" id="L9i-at-7Gl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="Retract" destination="GwW-Dn-gvB" id="gEE-nH-mtM"/>
+                        <outlet property="myView" destination="uqa-Di-XOw" id="vA5-7h-Sv1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mhg-Br-nvu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1781.5999999999999" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
