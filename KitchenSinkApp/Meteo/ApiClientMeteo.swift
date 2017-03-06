@@ -71,7 +71,9 @@ class DataMeteo{
 }
 
 class ApiCLientMeteo{
+    //Vous aurait besoin d'une clef api darksky afin de faire fonctionner cette Api.
     let keyApi = KeyApi()
+    
     let baseURL : String = "https://api.darksky.net/forecast/"
     lazy var data = NSMutableData()
     var MeteoTab: [DataMeteo] = []

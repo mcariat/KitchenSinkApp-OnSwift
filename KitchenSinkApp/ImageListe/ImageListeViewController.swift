@@ -29,7 +29,6 @@ class ImageListeViewController : UITableViewController{
         super.viewDidLoad()
         //Remplisage d'imageCache avec les url https de test.
         tabUrl.forEach { (url) in
-            print(url.characters.count)
             if(url.characters.count != 0){
                 imageCache.append(ImageCache(url: url))
             }
@@ -79,7 +78,9 @@ extension UIImageView{
             else {
                 self.image = UIImage(data: data!)!
             }
-            tableView.reloadData()
+            DispatchQueue.main.async(execute: { 
+                tableView.reloadData()
+            })
             }.resume()
         
     }
