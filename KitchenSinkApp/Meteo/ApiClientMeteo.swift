@@ -72,6 +72,13 @@ class DataMeteo{
 
 class ApiCLientMeteo{
     //Vous aurait besoin d'une clef api darksky afin de faire fonctionner cette Api.
+    //créer le fichier Key.swift
+    //entrer le code suivant:
+    
+    //class KeyApi {
+    //  public let meteoKeyApi: String = "your key darksky"
+    //}
+    
     let keyApi = KeyApi()
     
     let baseURL : String = "https://api.darksky.net/forecast/"

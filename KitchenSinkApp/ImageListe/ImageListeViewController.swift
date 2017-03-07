@@ -9,12 +9,16 @@
 import UIKit
 class ImageListeViewController : UITableViewController{
     
-    //associe une url à son image ainsi que sont état de chargement.
+    /// Associe une url à son image ainsi que sont état de chargement.
     struct ImageCache {
         var urlString : String
         var imageView : UIImageView = UIImageView()
         var onLoading: Bool = false
         
+        
+        /// Initialisateur
+        ///
+        /// - parameter urlString: Url ou est stokée une image.
         init(url urlString: String){
             self.urlString = urlString
         }
@@ -65,8 +69,10 @@ class ImageListeViewController : UITableViewController{
 
 //Implemente des fonctions dans la class UIImageView
 extension UIImageView{
-    //Fait une requette pour récupérer l'image contenue dan l'url,
-    //et l'enregistre dans la variable image de la class UIImageView.
+    /// Fait une requette pour récupérer l'image contenue dans urlString, et l'enregistre dans la variable image de la class UIImageView contenue dans la cellule du tableView.
+    ///
+    /// - parameter urlString: Url ou est stokée une image.
+    /// - parameter tableView: IBOutlet du TableView dans lequel sont affichée les images.
     func getImageFromUrl(urlString: String, tableView: UITableView){
         //Lance un requette de connection https.
         URLSession.shared.dataTask(with: URL(string: urlString)!) { (data, response, error) in
